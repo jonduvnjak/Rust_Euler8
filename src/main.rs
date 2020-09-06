@@ -3,7 +3,7 @@ fn main() {
     let digits_vec = maybe_vec_digits(digits);
     let window_size = 13;
     let mut largest_product = 0;
-    
+
     for i in 0..&digits_vec.len() - window_size {
         let window_vector_product = digits_vec[i..i + window_size].iter().product::<u64>();
 
@@ -11,7 +11,7 @@ fn main() {
             largest_product = window_vector_product;
         }
     }
-    println!("{:?}", largest_product);
+    println!("{}", largest_product);
 
     fn maybe_vec_digits(option: Option<Vec<u64>>) -> Vec<u64> {
         match option {
