@@ -3,24 +3,25 @@ fn main() {
     let digits_vec = maybe_vec_digits(digits);
     let window_size = 13;
     let mut largest_product = 0;
+    
     for i in 0..&digits_vec.len() - window_size {
-        let window_vector = window_range_to_vector(&digits_vec[i..i + window_size]);
-        let window_vector_iter = window_vector.into_iter();
-        let possible_largest = window_vector_iter.product::<u64>();
+        let window_vector_product = digits_vec[i..i + window_size].into_iter().product::<u64>();
+        // let window_vector_iter = window_vector.into_iter();
+        // let possible_largest = window_vector_iter.product::<u64>();
 
-        if possible_largest > largest_product {
-            largest_product = possible_largest;
+        if window_vector_product > largest_product {
+            largest_product = window_vector_product;
         }
     }
     println!("{:?}", largest_product);
 
-    fn window_range_to_vector(window_range: &[u64]) -> Vec<&u64> {
-        let mut vector = Vec::new();
-        for x in window_range {
-            vector.push(x);
-        }
-        vector
-    }
+    // fn window_range_to_vector(window_range: &[u64]) -> Vec<&u64> {
+    //     let mut vector = Vec::new();
+    //     for x in window_range {
+    //         vector.push(x);
+    //     }
+    //     vector
+    // }
 
     fn maybe_vec_digits(option: Option<Vec<u64>>) -> Vec<u64> {
         //let mut vector = Vec::new();

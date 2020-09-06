@@ -1,1 +1,1 @@
-/Users/volumental/projects/euler8/euler8/target/debug/euler8: /Users/volumental/projects/euler8/euler8/src/main.rs
+/Users/volumental/projects/emilk/Rust_Euler8/target/debug/euler8: /Users/volumental/projects/emilk/Rust_Euler8/src/main.rs
