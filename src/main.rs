@@ -5,7 +5,7 @@ fn main() {
     let mut largest_product = 0;
     
     for i in 0..&digits_vec.len() - window_size {
-        let window_vector_product = digits_vec[i..i + window_size].into_iter().product::<u64>();
+        let window_vector_product = digits_vec[i..i + window_size].iter().product::<u64>();
         // let window_vector_iter = window_vector.into_iter();
         // let possible_largest = window_vector_iter.product::<u64>();
 
