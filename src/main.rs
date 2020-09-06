@@ -6,8 +6,10 @@ fn main() {
 
     for window in digits_vec.windows(window_size) {
 
-        if window.iter().product::<u64>() > largest_product {
-            largest_product = window.iter().product::<u64>();
+        let window_product = window.iter().product::<u64>();
+
+        if window_product > largest_product {
+            largest_product = window_product;
         }
     }
     println!("{}", largest_product);
