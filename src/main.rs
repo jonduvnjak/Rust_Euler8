@@ -6,8 +6,6 @@ fn main() {
     
     for i in 0..&digits_vec.len() - window_size {
         let window_vector_product = digits_vec[i..i + window_size].iter().product::<u64>();
-        // let window_vector_iter = window_vector.into_iter();
-        // let possible_largest = window_vector_iter.product::<u64>();
 
         if window_vector_product > largest_product {
             largest_product = window_vector_product;
@@ -15,16 +13,7 @@ fn main() {
     }
     println!("{:?}", largest_product);
 
-    // fn window_range_to_vector(window_range: &[u64]) -> Vec<&u64> {
-    //     let mut vector = Vec::new();
-    //     for x in window_range {
-    //         vector.push(x);
-    //     }
-    //     vector
-    // }
-
     fn maybe_vec_digits(option: Option<Vec<u64>>) -> Vec<u64> {
-        //let mut vector = Vec::new();
         match option {
             Some(vec) => vec,
             None => {
