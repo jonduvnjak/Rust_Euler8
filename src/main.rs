@@ -3,7 +3,7 @@ use std::io;
 fn main() {
 //Figure out a way so that if the user does not type in digits then they are given an opportunity to type in digits again.
 //Figure out a way to allow the user to create the window size
-//guessing game has some ineresting match code that might be useful
+//guessing game has some ineresting code that might be useful
     let mut digits = String::new();
     io::stdin().read_line(&mut digits);
     let digits = string_to_digits(&digits.trim());
