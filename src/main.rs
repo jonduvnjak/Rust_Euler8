@@ -2,7 +2,6 @@ use std::io;
 
 fn main() {
     let window_size = 13;
-
     let user_input = get_user_input();
     println!("{}", calculate_largest_window(window_size, user_input));
 }
@@ -23,7 +22,7 @@ fn calculate_largest_window(window_size: i32, digits_vec: Vec<u64>) -> u64 {
 }
 
 //ALL BELOW IS TO 1. GET USER INPUT 2. ATTEMPT TO CONVERT IT TO VECTOR OF u64's 3. CHECK WHETHER THE CONVERSION WAS SUCCESSFUL - 
-//IF NOT SUCCESSFUL THEN PROMPT USER TO TYPE IN NUMBERS AND TRY AGANIN
+//IF NOT SUCCESSFUL THEN PROMPT USER TO TYPE IN NUMBERS AND TRY AGAIN
 fn get_user_input() -> Vec<u64> {
     let mut digits_vec = Vec::new();
     let mut digits;
